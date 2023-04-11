@@ -45,10 +45,43 @@ console.log(search(arr, i, value))
 
 // Question 3
 
+function addParagraph() {
+    const text = prompt("Enter a sentence/paragraph");
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = text;
+    // const body = document.querySelector("body");
+    const id = document.getElementById("para1")
+    id.appendChild(newParagraph);
+}
 
-let
+// -------------x-------------------
+
+// Question 4
+
+function addList() {
+    const listText = prompt("Enter a sentence/paragraph");
+    const li = document.createElement("li");
+    li.textContent = listText;
+    // const body = document.querySelector("body");
+    const id = document.getElementById("list1")
+    id.appendChild(li);
+}
+
+// -------------x-------------------
+
+// Question 5
+
+function colorPara() {
+    const paraID = prompt("Enter Paragraph ID");
+    const colour = prompt("Enter Colour Name")
+    // const id1 = document.getElementById("bg1");
+    // id.style.color = "yellow"
+    const id2 = document.getElementById(paraID);
+    id2.style.color = colour;
+}
 
 
-// ----------------------------x----
+// -------------x-------------------
 
+// Question 6
 
