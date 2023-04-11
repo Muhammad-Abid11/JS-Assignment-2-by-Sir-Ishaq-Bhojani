@@ -85,3 +85,69 @@ function colorPara() {
 
 // Question 6
 
+let previousRecord = localStorage.getItem("Student Data");
+
+let arrData = previousRecord ? JSON.parse(previousRecord) : []
+
+function setData(key, obj) {
+    // let strData = JSON.stringify(arrData.push(obj););
+    // localStorage.setItem(key, strData);
+    let existingData = JSON.parse(localStorage.getItem(key)) || [];
+    existingData.push(obj);
+    localStorage.setItem(key, JSON.stringify(existingData));
+    console.log(existingData);
+}
+
+function takeData() {
+    let data = {
+        name: prompt("Enter Name"),
+        roll: +prompt("Enter Roll Number"),
+        subject: prompt("Enter Subject Name"),
+    }
+    let key = prompt("Enter Property Name");
+    setData(key.toLowerCase(), data);
+}
+
+
+// -------------x-------------------
+
+// Question 7
+function getData() {
+    let keys = prompt("Enter Property to get its Data")
+    // console.log(JSON.parse(localStorage.getItem(keys)))
+    return JSON.parse(localStorage.getItem(keys))
+}
+
+// -------------x-------------------
+
+// Question 8
+
+
+let previousRecord2 = localStorage.getItem("Student Data");
+
+let arrData2 = previousRecord2 ? JSON.parse(previousRecord2) : []
+
+function setData(key, obj) {
+    // let strData = JSON.stringify(arrData.push(obj););
+    // localStorage.setItem(key, strData);
+    let existingData = JSON.parse(localStorage.getItem(key)) || [];
+    existingData.push(obj);
+    localStorage.setItem(key, JSON.stringify(existingData));
+    console.log(existingData);
+}
+
+function takeData2() {
+    let data = {
+        name: prompt("Enter Name"),
+        roll: +prompt("Enter Roll Number"),
+        subject: prompt("Enter Subject Name"),
+    }
+    let key = prompt("Enter Property Name");
+    setData(key.toLowerCase(), data);
+}
+
+function getData2() {
+    let keys = prompt("Enter Property to get its Data")
+    // console.log(JSON.parse(localStorage.getItem(keys)))
+    return JSON.parse(localStorage.getItem(keys))
+}
