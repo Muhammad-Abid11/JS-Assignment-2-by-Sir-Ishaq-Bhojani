@@ -14,7 +14,9 @@ function parent(x) {
 let add = parent(x);
 console.log(add(y))
 
-
+    //also use it 
+    
+//parent(1)(7)
 */
 
 // ----------------------------x----
